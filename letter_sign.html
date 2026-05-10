@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מכתב הורי גן צבעוני — חתימות</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Frank+Ruhl+Libre:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:    #FAF7F2;
+    --warm:     #F3EDE3;
+    --sand:     #E8DDD0;
+    --olive:    #5C6B4A;
+    --olive-lt: #8DA070;
+    --olive-bg: #EBF0E6;
+    --rust:     #B35C3A;
+    --rust-lt:  #F5EBE6;
+    --ink:      #2C2C2C;
+    --ink-soft: #555550;
+    --border:   #D4C9B8;
+    --radius:   12px;
+    --shadow:   0 4px 24px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    background-image:
+      radial-gradient(ellipse at 10% 0%, rgba(141,160,112,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 90% 100%, rgba(179,92,58,0.08) 0%, transparent 50%);
+    font-family: 'Heebo', sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .page-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* ─── Header strip ─── */
+  .site-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .site-header .tag {
+    display: inline-block;
+    background: var(--olive);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 4px 14px;
+    border-radius: 99px;
+    margin-bottom: 0.75rem;
+  }
+  .site-header h1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    font-weight: 900;
+    color: var(--olive);
+    line-height: 1.2;
+  }
+  .site-header p {
+    margin-top: 0.5rem;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  /* ─── Letter card ─── */
+  .letter-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem 2rem 1.5rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .letter-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 6px; height: 100%;
+    background: linear-gradient(180deg, var(--olive), var(--olive-lt));
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+  .letter-lock-note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--olive-bg);
+    border: 1px solid #C9D9BC;
+    border-radius: 8px;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.8rem;
+    color: var(--olive);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .letter-lock-note svg { flex-shrink: 0; }
+
+  .letter-date {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+  }
+  .letter-to {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    color: var(--ink-soft);
+  }
+  .letter-to strong {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .letter-subject {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--olive);
+    border-bottom: 2px solid var(--olive-bg);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.25rem;
+  }
+  .letter-body p {
+    font-size: 0.92rem;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+  }
+  .letter-close {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    margin-top: 1.25rem;
+  }
+  .letter-close strong {
+    color: var(--ink);
+  }
+
+  /* ─── Divider ─── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0 1.75rem;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ─── Form card ─── */
+  .form-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .form-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 6px; height: 100%;
+    background: linear-gradient(180deg, var(--rust), #D4845E);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+
+  .form-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--rust);
+    margin-bottom: 0.3rem;
+  }
+  .form-subtitle {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.75rem;
+  }
+
+  .field-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 480px) {
+    .field-group { grid-template-columns: 1fr; }
+    .letter-card, .form-card { padding: 1.25rem; }
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .field.full { grid-column: 1 / -1; }
+
+  label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+  label span.req { color: var(--rust); }
+
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--cream);
+    direction: rtl;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  input[type="text"]:focus,
+  select:focus {
+    border-color: var(--rust);
+    box-shadow: 0 0 0 3px rgba(179,92,58,0.1);
+    background: #fff;
+  }
+
+  .select-wrap { position: relative; }
+  .select-wrap::after {
+    content: '▾';
+    position: absolute;
+    left: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--ink-soft);
+    pointer-events: none;
+    font-size: 0.85rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 1.25rem;
+    padding: 0.9rem 1.5rem;
+    background: var(--rust);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(179,92,58,0.3);
+  }
+  .submit-btn:hover {
+    background: #9B4D30;
+    box-shadow: 0 6px 18px rgba(179,92,58,0.35);
+  }
+  .submit-btn:active { transform: scale(0.98); }
+
+  /* ─── Privacy note ─── */
+  .privacy {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+    margin-top: 1rem;
+    opacity: 0.7;
+  }
+
+  /* ─── Thank you state ─── */
+  .thankyou {
+    display: none;
+    text-align: center;
+    padding: 2.5rem 1rem;
+  }
+  .thankyou .check {
+    width: 64px; height: 64px;
+    background: var(--olive-bg);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.25rem;
+  }
+  .thankyou h2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--olive);
+    margin-bottom: 0.5rem;
+  }
+  .thankyou p {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.75rem;
+    color: var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header class="site-header">
+    <div class="tag">🌈 גן צבעוני, רעות</div>
+    <h1>מכתב הורים למפקחת<br>לקראת שנת הלימודים הקרובה</h1>
+    <p>קראו את המכתב וחתמו בתחתית הדף</p>
+  </header>
+
+  <!-- Letter -->
+  <div class="letter-card">
+    <div class="letter-lock-note">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      מכתב זה מוצג לקריאה בלבד — ניתן לחתום בתחתית הדף בלבד
+    </div>
+
+    <div class="letter-date">10.05.2026</div>
+
+    <div class="letter-to">
+      לכבוד<br>
+      <strong>הגב' דורית מאור, מפקחת גני הילדים</strong>
+    </div>
+
+    <div class="letter-subject">
+      הנדון: מחשבות ורחשי לב של הורי גן "צבעוני" לקראת שנת הלימודים הקרובה
+    </div>
+
+    <div class="letter-body">
+      <p>שלום רב,</p>
+      <p>אנו, הורי ילדי גן "צבעוני" ברעות, פונים אלייך מתוך הערכה רבה לעבודתך המאומצת ולמחשבה העמוקה המושקעת בשיבוץ הצוותים החינוכיים בעירנו.</p>
+      <p>לקראת עזיבתה של נועם, שהייתה עבור ילדינו דמות משמעותית ואהובה מאוד, אנו חשים אחריות לשתף אותך בתחושותינו. בשנה האחרונה, על רקע חוסר היציבות המדיני והשינויים שעברו הילדים כבר בתחילת השנה, הנושא של רצף טיפולי ותחושת ביטחון הפך עבורנו ועבור הילדים לקריטי במיוחד. אנו שואפים למצוא עבורם דמות שתשרה רוגע, תכיר את הקהילה ותאפשר נחיתה רכה ככל הניתן במציאות החדשה.</p>
+      <p>בתוך התהליך הזה, עלה בקרבנו שמה של מאיה שחר. חלק מההורים מכירים את עשייתה החינוכית ומעריכים מאוד את הגישה הרגישה והנינוחה שהיא מביאה עמה. התרשמנו כי האיכויות המקצועיות שלה, לצד היותה בת היישוב המחוברת למארג הקהילתי ברעות, עשויות להתאים באופן מדויק לצורך של הגן שלנו בעת הזו.</p>
+      <p>חשוב לנו להדגיש כי אנו מבינים היטב ששיקולי השיבוץ הם רחבים, מערכתיים ומורכבים, ואין לנו כל כוונה להתערב בסמכותך המקצועית או להכתיב החלטות. עם זאת, הרגשנו שיהיה זה נכון לשתף אותך בכך שדמותה של מאיה נוסכת בנו, כהורים, תחושת אמון וביטחון גבוהה.</p>
+      <p>נשמח מאוד אם תינתן האפשרות לשקול את מועמדותה לשיבוץ בגן "צבעוני", מתוך אמונה שחיבור כזה יכול לתרום רבות ליציבותם הרגשית של הילדים ולרווחת הקהילה כולה.</p>
+    </div>
+
+    <div class="letter-close">
+      תודה רבה על ההקשבה ועל העשייה למען ילדינו,<br><br>
+      בברכה,<br>
+      <strong>קהילת משפחות גן "צבעוני", רעות</strong>
+    </div>
+  </div>
+
+  <div class="divider">✍️ &nbsp;הצטרפו למכתב בחתימתכם</div>
+
+  <!-- Form -->
+  <div class="form-card">
+    <div class="form-title">חתימת הורים</div>
+    <div class="form-subtitle">אנא מלאו את הפרטים הבאים להצטרפות למכתב. כל הורה ממלא בנפרד.</div>
+
+    <form id="signForm"
+          action="https://formspree.io/f/mvzlvvob"
+          method="POST">
+
+      <input type="hidden" name="_language" value="he">
+      <input type="hidden" name="_subject" value="חתימה חדשה — מכתב הורי גן צבעוני">
+
+      <div class="field-group">
+        <div class="field">
+          <label for="parentName">שם ההורה <span class="req">*</span></label>
+          <input type="text" id="parentName" name="שם ההורה" placeholder="ישראל ישראלי" required>
+        </div>
+        <div class="field">
+          <label for="childName">שם הילד/ה <span class="req">*</span></label>
+          <input type="text" id="childName" name="שם הילד/ה" placeholder="ילד ישראלי" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="group">קבוצה <span class="req">*</span></label>
+        <div class="select-wrap">
+          <select id="group" name="קבוצה" required>
+            <option value="" disabled selected>בחרו קבוצה...</option>
+            <option value="ממשיכים">הורי ילדים הלומדים בגן וממשיכים בשנת הלימודים הבאה</option>
+            <option value="מצטרפים">הורי ילדים המצטרפים לגן בשנת הלימודים הבאה</option>
+            <option value="בוגרים">הורי ילדים בוגרי הגן המבקשים להצטרף למכתב</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">✔ אני מצטרף/ת למכתב</button>
+    </form>
+
+    <div class="thankyou" id="thankYou">
+      <div class="check">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5C6B4A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h2>תודה שהצטרפת!</h2>
+      <p>חתימתך נרשמה בהצלחה.<br>נחזור אליך בקרוב עם עדכונים.</p>
+    </div>
+
+    <p class="privacy">🔒 הפרטים נשמרים בצורה מאובטחת ולא יועברו לגורמים חיצוניים</p>
+  </div>
+
+  <div class="footer">גן צבעוני, רעות &nbsp;·&nbsp; 2026</div>
+
+</div>
+
+<script>
+  const form = document.getElementById('signForm');
+  const thankYou = document.getElementById('thankYou');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'שולח...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+      } else {
+        btn.textContent = 'שגיאה — נסו שנית';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'שגיאה — נסו שנית';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
